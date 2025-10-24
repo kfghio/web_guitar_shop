@@ -1,0 +1,30 @@
+<form action="/users/{{user.id}}/update" method="POST">
+  <h2>Редактировать пользователя</h2>
+
+  <div>
+    <label>Email:</label>
+    <input type="email" name="email" value="{{user.email}}" required>
+  </div>
+
+  <fieldset>
+    <legend>Профиль</legend>
+    <div>
+      <label>Имя:</label>
+      <input type="text" name="profile[firstName]" value="{{user.profile.firstName}}" required>
+    </div>
+    <div>
+      <label>Фамилия:</label>
+      <input type="text" name="profile[lastName]" value="{{user.profile.lastName}}" required>
+    </div>
+  </fieldset>
+
+  <div>
+    <label>Роль:</label>
+    <select name="role[name]" required>
+      <option value="user" >Пользователь</option>
+      <option value="admin" >Администратор</option>
+    </select>
+  </div>
+
+  <button type="submit">Обновить</button>
+</form>

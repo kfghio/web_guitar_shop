@@ -1,0 +1,56 @@
+
+<h1>Добавить новый товар</h1>
+
+<form action="/products" method="post">
+  <div>
+    <label>SKU:</label>
+    <input type="text" name="sku" required>
+  </div>
+
+  <div>
+    <label>Название:</label>
+    <input type="text" name="name" required>
+  </div>
+
+  <div>
+    <label>Описание:</label>
+    <textarea name="description" required></textarea>
+  </div>
+
+  <div>
+    <label>Количество на складе:</label>
+    <input
+      type="number"
+      name="stock"
+      min="0"
+      required
+    >
+  </div>
+
+  <div>
+    <label>Категория:</label>
+    <select name="categoryId" required>
+      <option value="">Выберите категорию</option>
+      {{#each categories}}
+        <option value="{{this.id}}">{{this.name}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div>
+    <label>Бренд:</label>
+    <select name="brandId" required>
+      <option value="">Выберите бренд</option>
+      {{#each brands}}
+        <option value="{{this.id}}">{{this.name}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div>
+    <label>Цена:</label>
+    <input type="number" step="0.01" name="price" required>
+  </div>
+
+  <button type="submit">Создать</button>
+</form>

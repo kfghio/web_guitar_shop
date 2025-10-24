@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Картинка-ссылка</title>
+    <link rel="stylesheet" href="css/accoustic.css">
+    <script src="scripts/preload.js" defer></script>
+    <script src="scripts/load.js" defer></script>
+    <script src="scripts/active.js" defer></script>
+</head>
+<body class="body">
+
+<header class="header">
+    <h1 class="headers h1">GSS</h1>
+    <nav class="nav">
+        <ul class="nav ul">
+            <li><a href="guitars.html">Главная</a>
+                <ul>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="affairs.html">Дела</a></li>
+                    <li><a href="schedule.html">Расписание</a></li>
+                </ul>
+            </li>
+            <li><a href="#goods">Товары</a>
+                <ul>
+                    <li><a href="acoustic.html">Акустические гитары</a></li>
+                    <li><a href="electric.html">Электрогитары</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="product-table">
+        <h2 class="headers-top">Топ акустических гитар</h2>
+        <div class="table-container">
+            <div class="styled-row header-row">
+                <div class="styled-cell">Название</div>
+                <div class="styled-cell">Продаж</div>
+                <div class="styled-cell">Цена</div>
+            </div>
+            <div class="styled-row">
+                <div class="styled-cell">Fender FA-125</div>
+                <div class="styled-cell">1259</div>
+                <div class="styled-cell">40000 руб</div>
+            </div>
+            <div class="styled-row">
+                <div class="styled-cell">IBANEZ TCY10E-BK</div>
+                <div class="styled-cell">585</div>
+                <div class="styled-cell">20000 руб</div>
+            </div>
+            <div class="styled-row">
+                <div class="styled-cell">Yamaha F310</div>
+                <div class="styled-cell">100</div>
+                <div class="styled-cell">38500 руб</div>
+            </div>
+            <div class="styled-row">
+                <div class="styled-cell">Yamaha F310N</div>
+                <div class="styled-cell">100</div>
+                <div class="styled-cell">21500 руб</div>
+            </div>
+        </div>
+    </section>
+
+    <button id="retry-button">Повторить запрос</button>
+    
+    <section id="dynamic-data">
+        <h2>Данные с сервера</h2>
+        <div id="preloader" style="display: none;">
+            <img src="other/load.gif" alt="Loading..." />
+        </div>
+        <div id="content"></div>
+    </section>
+</main>
+
+</body>
+</html>

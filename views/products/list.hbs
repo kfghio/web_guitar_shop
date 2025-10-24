@@ -1,0 +1,17 @@
+<h1>Все товары</h1>
+
+{{#each products}}
+  <div class="product-card">
+    <h2>{{name}}</h2>
+    <p>Цена: {{price}} ₽</p>
+    <a href="/products/{{id}}/reviews/add">Добавить отзыв ({{reviewCount}})</a>
+    <a href="/products/{{id}}/details"> Показать отзывы ({{reviewCount}})</a>
+    <a href="/products/{{id}}/edit">Редактировать товар</a>
+    <form action="/products/{{id}}/delete" method="post">
+      <button type="submit">Удалить</button>
+    </form>
+  </div>
+{{/each}}
+
+<a href="/products/add">Добавить товар</a>
+<a href="/">Главная</a>

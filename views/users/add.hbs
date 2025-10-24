@@ -1,0 +1,35 @@
+<form action="/users" method="POST">
+  <h2>Добавить пользователя</h2>
+
+  <div>
+    <label>Email:</label>
+    <input type="email" name="email" required>
+  </div>
+
+  <div>
+    <label>Пароль:</label>
+    <input type="password" name="password" required>
+  </div>
+
+  <fieldset>
+    <legend>Профиль</legend>
+    <div>
+      <label>Имя:</label>
+      <input type="text" name="profile[firstName]" required>
+    </div>
+    <div>
+      <label>Фамилия:</label>
+      <input type="text" name="profile[lastName]" required>
+    </div>
+  </fieldset>
+
+  <div>
+    <label>Роль:</label>
+    <select name="role[name]" required>
+      <option value="user">Пользователь</option>
+      <option value="admin">Администратор</option>
+    </select>
+  </div>
+
+  <button type="submit">Создать</button>
+</form>

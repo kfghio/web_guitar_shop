@@ -1,0 +1,29 @@
+{{#> layouts/main title="Авторизация"}}
+  <section class="gg">
+    <div class="container">
+      <div class="auth-container">
+        <h2 class="gg__title">Регистрация</h2>
+        <form action="/auth/register" method="POST" id="task-form">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" required>
+
+          <label for="rpassword">Повторите пароль:</label>
+          <input type="password" id="rpassword" name="rpassword" required>
+
+          <label for="firstName">Имя:</label>
+          <input type="text" id="firstName" name="profile.firstName" required>
+
+          <label for="lastName">Фамилия:</label>
+          <input type="text" id="lastName" name="profile.lastName" required>
+
+          <input type="hidden" name="role[name]" value="user">
+
+          <button type="submit">Зарегестрироваться</button>
+        </form>
+      </div>
+    </div>
+  </section>
+{{/layouts/main}}

@@ -1,0 +1,10 @@
+{{#each categories}}
+  <div>
+    {{this.name}}
+    <a href="/categories/{{this.id}}/edit">Изменить</a>
+    <form action="/categories/{{this.id}}/delete" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <button type="submit">Удалить</button>
+    </form>
+  </div>
+{{/each}}

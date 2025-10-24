@@ -1,0 +1,10 @@
+{{#each orders}}
+  <div>
+    Заказ #{{this.id}} ({{this.status}})
+    <a href="/orders/{{this.id}}/edit">Изменить</a>
+    <form action="/orders/{{this.id}}/delete" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <button type="submit">Удалить</button>
+    </form>
+  </div>
+{{/each}}

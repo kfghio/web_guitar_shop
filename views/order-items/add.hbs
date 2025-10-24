@@ -1,0 +1,15 @@
+<form action="/order-items" method="POST">
+  <select name="productId" required>
+    {{#each products}}
+      <option value="{{this.id}}">{{this.name}} (ID: {{this.id}})</option>
+    {{/each}}
+  </select>
+  <select name="orderId" required>
+    {{#each orders}}
+      <option value="{{this.id}}">{{this.id}})</option>
+    {{/each}}
+  </select>
+  <input type="number" name="quantity" placeholder="Количество" required>
+  <input type="number" step="0.01" name="price" placeholder="Цена" required>
+  <button type="submit">Добавить</button>
+</form>

@@ -1,0 +1,17 @@
+<h1>Добавить отзыв для {{product.name}}</h1>
+
+<form action="/reviews" method="post">
+  <input type="hidden" name="productId" value="{{product.id}}">
+
+  <label>
+    Комментарий:
+    <textarea name="comment" required></textarea>
+  </label>
+
+  <label>
+    Рейтинг (1-5):
+    <input type="number" name="rating" min="1" max="5" required>
+  </label>
+
+  <button type="submit">Создать отзыв</button>
+</form>

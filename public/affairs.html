@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>коснструктор расписания</title>
+    <link rel="stylesheet" href="css/accoustic.css">
+    <script src="scripts/load.js" defer></script>
+    <script src="scripts/active.js" defer></script>
+</head>
+<body class="body">
+
+<header class="header">
+    <h1 class="headers h1">GSS</h1>
+    <nav class="nav">
+        <ul class="nav ul">
+            <li><a href="guitars.html">Главная</a>
+                <ul>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="affairs.html">Дела</a></li>
+                    <li><a href="schedule.html">Расписание</a></li>
+                </ul>
+            </li>
+            <li><a href="#goods">Товары</a>
+                <ul>
+                    <li><a href="acoustic.html">Акустические гитары</a></li>
+                    <li><a href="electric.html">Электрогитары</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+    <h1>Список дел</h1>
+    <form id="todoForm">
+        <input type="text" id="todoInput" placeholder="Введите новое дело" required />
+        <button type="submit">Добавить</button>
+    </form>
+    <ul id="todoList" class="todo-list"></ul>
+</main>
+
+<script src="/scripts/affair.js"></script>
+</body>
+</html>
+
+    

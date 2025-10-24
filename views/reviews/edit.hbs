@@ -1,0 +1,5 @@
+<form action="/reviews/{{review.id}}/update" method="post">
+  <input type="text" name="comment" value="{{review.comment}}" required>
+  <input type="number" name="rating" value="{{review.rating}}">
+  <button type="submit">Update</button>
+</form>

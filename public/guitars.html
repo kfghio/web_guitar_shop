@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="гитара, музыкальный инструмент">
+    <meta name="description" content="Интернет магазин гитар">
+    <title>Магазин гитар</title>
+    <link rel="stylesheet" href="css/outlines.css">
+    <script src="scripts/load.js" defer></script>
+    <script src="scripts/active.js" defer></script>
+</head>
+<body class="body">
+
+<header class="header">
+    <h1 class="headers h1">GSS</h1>
+    <nav class="nav">
+        <ul class="nav ul">
+            <li><a href="guitars.html">Главная</a>
+                <ul>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="affairs.html">Дела</a></li>
+                    <li><a href="schedule.html">Расписание</a></li>
+                </ul>
+            </li>
+            <li><a href="#goods">Товары</a>
+                <ul>
+                    <li><a href="acoustic.html">Акустические гитары</a></li>
+                    <li><a href="electric.html">Электрогитары</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+    <section id="welcome">
+        <article>
+            <h2 class="headers">Добро пожаловать</h2>
+            <p class="welcome"><strong>Guitar Soul Strings</strong> - <span class="bad">худший</span> <span class="underline">лучший</span> магазин гитар!</p>
+        </article>
+    </section>
+
+    <section id="goods">
+        <h2 class="headers">Товары</h2>
+        <ul>
+            <li>
+                <div class="image-container">
+                    <a href="acoustic.html">
+                        <img src="acoustic-guitar.jpg" alt="Акустическая гитара">
+                    </a>
+                    <p>Акустические гитары</p>
+                </div>
+            </li>
+            <li>
+                <div class="image-container">
+                    <a href="electric.html">
+                        <img src="electric-guitar.jpg" alt="Электрогитара">
+                    </a>
+                    <p>Электрогитары</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <aside>
+        <h3 class="headers">Неш девиз</h3>
+        <blockquote>Собери свой звук, <sub> найди свою гитару!</sub></blockquote>
+    </aside>
+
+    <section id="ascii-note">
+        <h2 class="headers">Нотки</h2>
+        <pre class="pre">
+            .
+            ┈┏━┓┈┈┈┈┈┏╯┈┈┈┈┏╯┈
+            ┈┣━┫┈┈┈┈┈┣╯┈┈┈┈┣╯┈
+            ╭┫╭┫┈┈┃┈╭┫┈┈┃┈╭┫┈┈
+            ╰╯╰╯┈╭┫┈╰╯┈╭┫┈╰╯┈┈
+            ┈┈┈┈┈╰╯┈┈┈┈╰╯┈┈┈┈┈
+        </pre>
+    </section>
+
+    <section id="backend-code-snippet">
+        <h2 class="headers">Часть нашего бэка</h2>
+        <pre class="pre"><code class="code">
+            package main
+
+            import (
+            "encoding/json"
+            "net/http"
+            )
+
+            type Response struct {
+            Message string `json:"message"`
+            Status  string `json:"status"`
+            }
+
+            func getData(w http.ResponseWriter, r *http.Request) {
+            response := Response{
+                Message: "Hello",
+                Status:  "success",
+            }
+            w.Header().Set("Content-Type", "application/json")
+            json.NewEncoder(w).Encode(response)
+            }
+
+            func main() {
+            http.HandleFunc("/api/data", getData)
+            http.ListenAndServe(":8080", nil)
+            }
+        </code></pre>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2024 Guitar shop</p>
+</footer>
+
+</body>
+</html>

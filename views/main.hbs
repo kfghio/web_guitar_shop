@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="гитара, музыкальный инструмент">
+  <meta name="description" content="Интернет магазин гитар">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/css/{{cssFile}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  {{> scripts}}
+
+  <!-- Вывод времени обработки в head -->
+  {{#if elapsedTime}}
+    <style>
+      .server-timing-header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgba(0,0,0,0.7);
+        color: white;
+        padding: 2px 5px;
+        font-size: 11px;
+        z-index: 1000;
+      }
+    </style>
+  {{/if}}
+</head>
+<body class="body">
+{{#if elapsedTime}}
+  <div class="server-timing-header">
+    Server processing: {{elapsedTime}}ms
+  </div>
+{{/if}}
+
+{{> header}}
+<main>
+  {{{body}}}
+</main>
+{{> footer}}
+
+{{#if additionalScripts}}
+  {{#each additionalScripts}}
+    <script src="{{this}}" defer></script>
+  {{/each}}
+{{/if}}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js" defer type="module"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js" defer type="module"></script>
+</body>
+</html>

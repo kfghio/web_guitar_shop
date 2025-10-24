@@ -1,0 +1,14 @@
+<form action="/orders" method="POST">
+  <select name="userId" required>
+    {{#each users}}
+      <option value="{{this.id}}">{{this.email}}</option>
+    {{/each}}
+  </select>
+  <input type="number" name="total" placeholder="Сумма" required>
+  <select name="status">
+    <option value="pending">Ожидание</option>
+    <option value="completed">Завершено</option>
+    <option value="cancelled">Отменено</option>
+  </select>
+  <button type="submit">Создать заказ</button>
+</form>

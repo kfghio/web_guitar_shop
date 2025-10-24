@@ -1,0 +1,21 @@
+
+<h1>{{product.name}}</h1>
+<p>Цена: {{product.price}} ₽</p>
+
+<h2>Отзывы</h2>
+{{#each product.reviews}}
+  <div class="review">
+    <p>Рейтинг: {{rating}}/5</p>
+    <p>{{comment}}</p>
+    <a href="/reviews/{{id}}/edit">edit ({{reviewCount}})</a>
+    <form action="/reviews/{{id}}/delete" method="post">
+      <input type="hidden" name="_method" value="DELETE">
+      <button type="submit">Удалить отзыв</button>
+    </form>
+  </div>
+{{else}}
+  <p>Пока нет отзывов</p>
+{{/each}}
+
+<a href="/products">Все товары</a>
+<a href="/products/{{product.id}}/edit">Редактировать</a>

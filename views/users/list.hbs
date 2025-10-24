@@ -1,0 +1,18 @@
+<h1>Список пользователей</h1>
+<a href="/users/add">Добавить нового</a>
+
+{{#each users}}
+  <div class="user-card">
+    <h3>{{this.email}}</h3>
+    <p>Имя: {{this.profile.firstName}} {{this.profile.lastName}}</p>
+    <p>Роль: {{this.role.name}}</p>
+
+    <div class="actions">
+      <a href="/users/{{this.id}}/edit">Изменить</a>
+      <form action="/users/{{this.id}}/delete" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit">Удалить</button>
+      </form>
+    </div>
+  </div>
+{{/each}}
